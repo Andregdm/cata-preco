@@ -1,5 +1,25 @@
 {
+  "name": "cata-preco",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andregdm/cata-preco.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andregdm/cata-preco/issues"
+  },
+  "homepage": "https://github.com/Andregdm/cata-preco#readme",
   "dependencies": {
-    "next": "^10.0.5"
+    "next": "^10.0.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
