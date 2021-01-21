@@ -6,6 +6,7 @@ async function tempo(request, response) {
     const nome1item = buscaProdJson.data.search.products[20].product.name;
     const preco1item = buscaProdJson.data.search.products[20].product.offers.result[0].salesPrice;
     
+    response.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate');
 
     response.json({
         date: dynamicDate.toGMTString(),
