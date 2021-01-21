@@ -1,8 +1,16 @@
-function tempo(request, response) {
+async function tempo(request, response) {
+    const apiSecret = process.env.AMERICANAS_API_SECRET;
     const dynamicDate = new Date();
+    const buscaProd = await fetch(`https://catalogo-bff-v1-americanas.b2w.io/graphql?operationName=pageSearch&variables=${apiSecret}`);
+    const buscaProdJson = await buscaProd.json();
+    const nome1item = buscaProdJson.data.search.products[20].product.name;
+    const preco1item = buscaProdJson.data.search.products[20].product.offers.result[0].salesPrice;
+    
 
     response.json({
-        date: dynamicDate.toGMTString()
+        date: dynamicDate.toGMTString(),
+        nome: nome1item,
+        preco: preco1item
     })
 }
 
